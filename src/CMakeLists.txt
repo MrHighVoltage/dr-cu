@@ -80,8 +80,8 @@ include_directories(${PATH_ISPD18})
 # Linker Flags  #
 #################
 
-# TODO: set static under release mode only
-set_target_properties(ispd19dr PROPERTIES LINK_FLAGS "-static -Wl,--whole-archive -rdynamic -lpthread -Wl,--no-whole-archive")
+# TODO: set static in release mode
+set_target_properties(ispd19dr PROPERTIES LINK_FLAGS "-Wl,--whole-archive -rdynamic -lpthread -Wl,--no-whole-archive")
 
 # Threads
 # target_link_libraries(ispd19dr ${CMAKE_THREAD_LIBS_INIT})
